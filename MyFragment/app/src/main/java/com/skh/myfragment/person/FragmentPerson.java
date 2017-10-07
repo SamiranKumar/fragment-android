@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.skh.myfragment.LogPrint;
 import com.skh.myfragment.R;
 
 import static com.skh.myfragment.person.ConfigKey.*;
@@ -55,14 +56,15 @@ public class FragmentPerson extends Fragment implements IViewPerson {
 
         FragmentPerson fragment = new FragmentPerson();
         fragment.setArguments(bundle);
-
+        LogPrint.print(person.toString());
         return fragment;
     }
 
     @Override
     public void setData(Person person) {
-        tvName.setText(String.format("Name: ", person.getName()));
-        tvAge.setText(String.format("Age  : ", person.getAge()));
+        LogPrint.print(person.toString());
+        tvName.setText("Name : "+ person.getName());
+        tvAge.setText( "Age  : "+ person.getAge());
     }
 
 

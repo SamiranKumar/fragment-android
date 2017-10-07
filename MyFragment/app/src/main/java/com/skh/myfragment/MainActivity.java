@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Person person = new Person();
         person.setName("Samiran Kumar");
-        person.setName("24");
+        person.setAge(24);
 
         Fragment fragment = FragmentPerson.createInstance(person);
         addFragment(fragment);
